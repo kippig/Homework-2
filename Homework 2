@@ -1,0 +1,27 @@
+print 'This program checks to see if two numbers are co-prime!'
+
+# This code gets two integers from the user. It is foolproof.
+a = 0
+b = 0
+while not isinstance(a, (int, long)) or not isinstance(b, (int, long))  or a < 1 or b < 1:
+    print 'Please enter two integers greater than zero.'
+    a = input('First number: ')
+    b = input('Second number: ')
+#print a
+#print b
+A = max(a,b)
+B = min(a,b)
+
+#Euclidean Algorithm
+remainder = 2
+while A%B > 1:
+    remainder = A%B
+    A = B
+    B = remainder
+
+if B == 1 or A%B == 1:
+    print str(a) + ' and ' + str(b) + ' are co-prime.'
+elif A%B == 0:
+    print str(a) + ' and ' + str(b) + ' have at least one common divisor: ' + str(B)
+else:
+    print 'Euclidean Error' #Shouldn't ever happen.
