@@ -1,3 +1,5 @@
+# You should name this file "something.py", i.e., it should end in .py.   Otherwise, it looks good...
+
 print 'This program checks to see if two numbers are co-prime!'
 
 # This code gets two integers from the user. It is foolproof.
